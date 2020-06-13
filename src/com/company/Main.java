@@ -5,13 +5,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.SortedMap;
+import java.util.*;
 
 public class Main {
 
-
+    static ArrayList<Integer> arrayCount1 = new ArrayList<>();
+    static String arrayWords1[] = new String[32];
 
     public static void main(String[] args) throws IOException {
 
@@ -46,10 +45,11 @@ public class Main {
             }
         } input2.close();
 
-
         output.write("1 том Война и мир. Лев Толстой" + "\n" + "Весь Архипелаг ГУЛаг. Солженицын Александр" + "\n");
         for (int i = 0; i<countSymbol.length; i++) {
             output.write(Character.toString(firstLetter + i) + ": " + countSymbol[32-i-1] + "\n");
+            arrayCount1.add(countSymbol[32-i-1]);
+            arrayWords1[i] = Character.toString(firstLetter + i);
         } output.close();
 
     }
