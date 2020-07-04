@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Statistic;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

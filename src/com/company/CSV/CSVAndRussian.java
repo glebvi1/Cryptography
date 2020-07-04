@@ -1,4 +1,4 @@
-package com.company;
+package com.company.CSV;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ public class CSVAndRussian {
     private static char lastLetter = '\u044f';
     private static String[] myWords = {"а", "б", "в", "г", "д", "е", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"};
 
-    static String toRussian(File fileCSV, File fileRussian) throws IOException {
+    public static String toRussian(File fileCSV, File fileRussian) throws IOException {
         FileReader fr = new FileReader(fileCSV.getName());
         FileWriter fw = new FileWriter(fileRussian.getName());
         Scanner scanner = new Scanner(fr);
@@ -37,7 +37,7 @@ public class CSVAndRussian {
 
     }
 
-    static String toCSV(File fileRussian, File fileCSV) throws IOException {
+    public static String toCSV(File fileRussian, File fileCSV) throws IOException {
         FileReader firstText = new FileReader(fileRussian.getName());
         FileWriter writerFirstText = new FileWriter(fileCSV.getName());
         Scanner scanner = new Scanner(firstText);
@@ -65,7 +65,7 @@ public class CSVAndRussian {
         return answer;
     }
 
-    static String easyChangeWithCSV(File fileCSV, int b, int k) throws FileNotFoundException {
+    public static String easyChangeWithCSV(File fileCSV, int b, int k) throws FileNotFoundException {
         FileReader csv = new FileReader(fileCSV.getName());
         Scanner scanner = new Scanner(csv);
         String text = "";

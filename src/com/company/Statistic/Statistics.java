@@ -1,4 +1,6 @@
-package com.company;
+package com.company.Statistic;
+
+import com.company.CSV.CSVAndRussian;
 
 import java.io.File;
 import java.io.FileReader;
